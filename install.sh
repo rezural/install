@@ -23,7 +23,7 @@ if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
   GROUP="admin"
   TOUCH="/usr/bin/touch"
 else
-  HOMEBREW_PREFIX_DEFAULT="/home/linuxbrew/.linuxbrew"
+  [[ -z "$HOMEBREW_PREFIX_DEFAULT" ]] && HOMEBREW_PREFIX_DEFAULT="/home/linuxbrew/.linuxbrew"
   HOMEBREW_CACHE="${HOME}/.cache/Homebrew"
 
   STAT="stat --printf"
